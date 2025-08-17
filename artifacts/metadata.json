@@ -1,0 +1,66 @@
+{
+  "generated_at": "2025-08-15 16:34:06.675788",
+  "data": {
+    "symbol": "DOGE-USD",
+    "start": "2017-01-01",
+    "end": "2025-06-30"
+  },
+  "splits": {
+    "train_end": "2023-12-31",
+    "val_end": "2024-12-31",
+    "seq_len": 120
+  },
+  "features": [
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume",
+    "ema_20",
+    "ema_50",
+    "ratio_close_ema20",
+    "ratio_close_ema50",
+    "z_logclose_60",
+    "log_ret_1d",
+    "hl_range_pct",
+    "oc_change_pct",
+    "ret_mean_5",
+    "ret_std_5",
+    "ret_mean_20",
+    "ret_std_20",
+    "atr_14",
+    "rsi_14",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "log_volume",
+    "vol_z_20",
+    "dow_sin",
+    "dow_cos",
+    "btc_log_ret_1d",
+    "btc_ret_mean_5",
+    "btc_ret_std_20",
+    "btc_ratio_close_ema20",
+    "btc_ratio_close_ema50",
+    "btc_z_logclose_60",
+    "btc_log_volume",
+    "btc_vol_z_20",
+    "log_spread_doge_btc",
+    "ret_corr_20"
+  ],
+  "model_config": {
+    "d_model": 96,
+    "num_heads": 4,
+    "num_layers": 2,
+    "ff_dim": 192,
+    "dropout": 0.25,
+    "l2_reg": 0.0001
+  },
+  "training": {
+    "epochs": 120,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "clipnorm": 1.0,
+    "patience": 8
+  }
+}
